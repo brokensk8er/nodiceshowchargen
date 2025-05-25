@@ -1,5 +1,11 @@
 body {
-    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    min-height: 100vh;       /* Ensure it takes up full viewport height */
+    margin: 0;
+    background-color: #e0f2f7;
     background-image: repeating-linear-gradient(
       0deg,
       transparent,
@@ -7,46 +13,68 @@ body {
       #e0e0e0 25px,
       #e0e0e0 50px
     );
-  }
-/* Add this new rule to your style.css file */
-.flavor-text {
-    font-size: clamp(1em, 5vw, 1.5em); /* Responsive font size: min 1em, preferred 5vw, max 1.5em */
-    color: #555; /* Slightly darker than light gray */
-    margin-top: -20px; /* Pull it closer to the main text */
-    margin-bottom: 30px; /* Space it from the button */
-    line-height: 1.4;
-    max-width: 80%; /* Limit width for readability on wide screens */
-    margin-left: auto;
-    margin-right: auto;
-    font-style: italic; /* Make it look like supporting text */
+    color: #2c3e50;
+    text-align: center; /* This centers inline-level content like text within block elements */
+    overflow: hidden;
 }
 
-/* Optional: Adjust existing styles if needed */
+.container {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 95%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically within the container */
+    align-items: center;     /* Center items horizontally within the container */
+    text-align: center;      /* Ensure text inside container is centered */
+    /* Add some background/shadow to the container to make it stand out */
+    background-color: #ffffff; /* White background for the content box */
+    border-radius: 15px; /* Slightly rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    padding: 40px 20px; /* More padding inside the container */
+}
+
 #randomCellContent {
-    font-size: 25vw; /* Your chosen size, keep it */
+    font-size: 25vw;
     font-weight: 800;
     line-height: 1.1;
-    margin-bottom: 20px; /* Adjusted margin to make space for flavor text */
+    margin-bottom: 20px; /* Space between main idea and flavor text */
     word-break: break-word;
     white-space: normal;
     color: #007bff;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    /* No need for text-align here if parent is centered */
 }
 
-/* ... keep your existing body, container, and button styles ... */
-
-/* Optional: Add a media query for very small screens if 20vw is too big for titles */
-@media (max-width: 480px) { /* Adjust this breakpoint as needed */
-    #randomCellContent {
-        font-size: 22vw; /* Make it even larger on very narrow screens */
-    }
+.flavor-text {
+    font-size: clamp(1em, 5vw, 1.5em);
+    color: #555;
+    margin-top: -5px; /* Reduced margin to bring it closer to the main text */
+    margin-bottom: 40px; /* Space from the button */
+    line-height: 1.4;
+    max-width: 90%; /* Allow it to be a bit wider if needed */
+    margin-left: auto;
+    margin-right: auto; /* These auto margins help center it if max-width is applied */
+    font-style: italic;
+    /* No need for text-align here if parent is centered */
 }
 
-/* Optional: Add a media query to cap the size on very large screens (desktops) */
-@media (min-width: 992px) { /* Adjust this breakpoint as needed */
-    #randomCellContent {
-        font-size: 80px; /* Cap at a fixed pixel size for large monitors */
-        /* Or use max-font-size if you want it to scale up to a limit: */
-        /* max-font-size: 80px; */
-    }
+button {
+    padding: 20px 40px;
+    font-size: 1.8em;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
