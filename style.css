@@ -36,15 +36,20 @@ body {
 }
 
 #randomCellContent {
-    font-size: 20vw;
+    font-size: 25vw; /* This is great for small screens */
     font-weight: 800;
     line-height: 1.1;
-    margin-bottom: 20px; /* Space between main idea and flavor text */
+    margin-bottom: 20px;
     word-break: break-word;
     white-space: normal;
     color: #007bff;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-    /* No need for text-align here if parent is centered */
+
+    /* --- ADD THIS MEDIA QUERY --- */
+    @media (min-width: 768px) { /* Apply these styles when the screen is 768px wide or wider */
+        font-size: 100px; /* Cap the font size at a maximum of 100px (or whatever looks good) */
+        /* You can adjust '100px' to whatever pixel size looks good on a larger screen */
+    }
 }
 
 .flavor-text {
