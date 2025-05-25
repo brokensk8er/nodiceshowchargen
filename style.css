@@ -36,7 +36,7 @@ body {
 }
 
 #randomCellContent {
-    font-size: 25vw;
+    font-size: 20vw;
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 20px; /* Space between main idea and flavor text */
