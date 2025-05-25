@@ -8,16 +8,32 @@ body {
       #e0e0e0 50px
     );
   }
-  #randomCellContent {
-    font-size: 25vw; /* Try increasing this value */
+/* Add this new rule to your style.css file */
+.flavor-text {
+    font-size: clamp(1em, 5vw, 1.5em); /* Responsive font size: min 1em, preferred 5vw, max 1.5em */
+    color: #555; /* Slightly darker than light gray */
+    margin-top: -20px; /* Pull it closer to the main text */
+    margin-bottom: 30px; /* Space it from the button */
+    line-height: 1.4;
+    max-width: 80%; /* Limit width for readability on wide screens */
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic; /* Make it look like supporting text */
+}
+
+/* Optional: Adjust existing styles if needed */
+#randomCellContent {
+    font-size: 25vw; /* Your chosen size, keep it */
     font-weight: 800;
     line-height: 1.1;
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* Adjusted margin to make space for flavor text */
     word-break: break-word;
     white-space: normal;
     color: #007bff;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
+
+/* ... keep your existing body, container, and button styles ... */
 
 /* Optional: Add a media query for very small screens if 20vw is too big for titles */
 @media (max-width: 480px) { /* Adjust this breakpoint as needed */
