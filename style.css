@@ -1,6 +1,6 @@
 @media (min-width: 768px) {
     #randomCellContent {
-        font-size: 40px; /* Further reduced cap for larger screens for better fit (was 45px) */
+        font-size: 28px; /* Further reduced cap for larger screens for better fit (was 45px) */
     }
 }
 
