@@ -1,6 +1,6 @@
 @media (min-width: 768px) {
     #randomCellContent {
-        font-size: 40px; /* Further reduced cap for larger screens for better fit (was 55px) */
+        font-size: 40px; /* Adjusted cap for larger screens for better fit */
     }
 }
 
@@ -42,7 +42,7 @@ body {
 }
 
 #randomCellContent {
-    font-size: 5vw; /* Further reduced base font size for smaller screens (was 6vw) */
+    font-size: 4.5vw; /* Adjusted base font size for smaller screens */
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 15px;
