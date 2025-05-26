@@ -1,6 +1,6 @@
 @media (min-width: 768px) {
     #randomCellContent {
-        font-size: 100px;
+        font-size: 40px; /* Further reduced cap for larger screens for better fit (was 45px) */
     }
 }
 
@@ -25,10 +25,11 @@ body {
 }
 
 .container {
-    padding: 20px;
+    padding: 20px; /* This line is effectively overridden by the next padding line */
     box-sizing: border-box;
-    width: 95%;
-    max-width: 700px;
+    max-width: 700px; /* Still caps the maximum width */
+    width: fit-content; /* Container width will now adjust to its content */
+    min-width: 300px; /* Ensures the container is not too narrow for short content or a button */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,25 +38,25 @@ body {
     background-color: #ffffff;
     border-radius: 30px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    padding: 50px 30px;
+    padding: 12px 30px 50px 30px; /* Top: 12px, Sides: 30px, Bottom: 50px */
 }
 
 #randomCellContent {
-    font-size: 12vw;
+    font-size: 4.5vw; /* Further reduced base font size for smaller screens (was 5vw) */
     font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 20px;
-    word-break: break-word;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    overflow-wrap: break-word; /* Ensures long words are broken to fit the container if necessary */
     white-space: normal;
     color: #007bff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
 }
 
 .flavor-text {
-    font-size: clamp(1em, 5vw, 1.5em);
-    color: #555;
+    font-size: clamp(1em, 4vw, 1.3em);
+    color: #666;
     margin-top: -5px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     line-height: 1.4;
     max-width: 90%;
     margin-left: auto;
@@ -64,20 +65,25 @@ body {
 }
 
 button {
-    padding: 20px 40px;
-    font-size: 1.8em;
+    padding: 18px 35px;
+    font-size: 1.6em;
     background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
+button:hover {
+    background-color: #218838;
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25);
+}
+
 button:active {
-    transform: translateY(2px);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
