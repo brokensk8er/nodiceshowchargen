@@ -27,7 +27,7 @@ body {
 .container {
     padding: 20px; /* This line is effectively overridden by the next padding line */
     box-sizing: border-box;
-    max-width: 700px; /* Still caps the maximum width */
+    /* max-width: 700px; /* Still caps the maximum width */
     width: fit-content; /* Container width will now adjust to its content */
     min-width: 300px; /* Ensures the container is not too narrow for short content or a button */
     display: flex;
